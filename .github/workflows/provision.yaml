@@ -10,12 +10,14 @@ jobs:
         env:
           OPENSEARCH_PASSWORD: ${{ secrets.OPENSEARCH_PASSWORD }}
           YANDEX_API_KEY: ${{ secrets.YANDEX_API_KEY }}
+          YANDEX_FOLDER_ID: ${{ vars.YANDEX_FOLDER_ID }}
         with:
           host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_USERNAME }}
           key: ${{ secrets.DEPLOY_SSH_KEY }}
-          envs: OPENSEARCH_PASSWORD,YANDEX_API_KEY
+          envs: OPENSEARCH_PASSWORD,YANDEX_API_KEY,YANDEX_FOLDER_ID
           script: |
             dnf -y install podman
             podman secret create --env=true opensearchpassword OPENSEARCH_PASSWORD
             podman secret create --env=true yandexapikey YANDEX_API_KEY
+            podman secret create --env=true yandexfolderid YANDEX_FOLDER_ID
