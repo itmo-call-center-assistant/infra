@@ -1,0 +1,5 @@
+{$HOST} {
+    reverse_proxy playfulchef_api:8000
+    header Access-Control-Allow-Origin "*"
+    encode gzip
+}

@@ -1,0 +1,11 @@
+[Unit]
+Description=Python RAG
+
+[Container]
+ContainerName=rag
+Image=ghcr.io/itmo-call-center-assistant/rag:latest
+AutoUpdate=registry
+Pod=callcenter.pod
+
+[Service]
+Restart=always
