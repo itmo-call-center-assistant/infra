@@ -23,4 +23,4 @@ jobs:
           script: |
             systemctl daemon-reload
             sudo podman auto-update
-            systemctl restart playfulchef-pod.service
+            systemctl restart callcenter-pod.service

@@ -2,10 +2,10 @@ name: Provision
 on: workflow_dispatch
 
 jobs:
-  deploy:
+  provision:
     runs-on: ubuntu-latest
     steps:
-      - name: Restart
+      - name: Setup container runtime
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.DEPLOY_HOST }}
