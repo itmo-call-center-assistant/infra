@@ -1,0 +1,16 @@
+[Unit]
+Description=Python RAG
+
+[Container]
+ContainerName=rag
+Image=ghcr.io/itmo-call-center-assistant/rag:latest
+Environment=OPENSEARCH_HOST=callcenter_opensearch
+Environment=OPENSEARCH_PORT=9200
+Environment=OPENSEARCH_USER=admin
+Secret=opensearchpassword,type=env,target=OPENSEARCH_PASSWORD
+Secret=yandexapikey,type=env,target=YANDEX_API_KEY
+AutoUpdate=registry
+Pod=callcenter.pod
+
+[Service]
+Restart=always

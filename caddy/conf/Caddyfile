@@ -1,5 +1,10 @@
 {$HOST} {
-    reverse_proxy playfulchef_api:8000
+    reverse_proxy callcenter_rag:8000
     header Access-Control-Allow-Origin "*"
     encode gzip
+
+    route /opensearch/* {
+        uri strip_prefix /opensearch
+        reverse_proxy callcenter_opensearch:9200
+    }
 }

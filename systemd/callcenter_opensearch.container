@@ -4,6 +4,8 @@ Description=Python RAG
 [Container]
 ContainerName=rag
 Image=ghcr.io/itmo-call-center-assistant/rag:latest
+Environment=discovery.type=single-node
+Secret=opensearchpassword,type=env,target=OPENSEARCH_INITIAL_ADMIN_PASSWORD
 AutoUpdate=registry
 Pod=callcenter.pod
 
