@@ -3,7 +3,7 @@ Description=Python RAG
 
 [Container]
 ContainerName=callcenter_rag
-Image=ghcr.io/itmo-call-center-assistant/rag:7655d2cffb75acc79bf8ba788245dfea459d3f1b
+Image=ghcr.io/itmo-call-center-assistant/rag:latest
 Environment=OPENSEARCH_HOST=localhost
 Environment=OPENSEARCH_PORT=9200
 Environment=OPENSEARCH_USER=admin
