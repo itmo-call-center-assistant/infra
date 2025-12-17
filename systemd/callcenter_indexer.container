@@ -3,7 +3,7 @@ Description=Indexer
 
 [Container]
 ContainerName=callcenter_indexer
-Image=ghcr.io/itmo-call-center-assistant/indexer:f5fc995f7fb8a4ce75110a52a6b86432b0c19a7a
+Image=ghcr.io/itmo-call-center-assistant/indexer:77698c98d147d73a310a2d57a2ceb1182f23ac5b
 Environment=OPENSEARCH_URL=https://localhost:9200
 Environment=OPENSEARCH_USER=admin
 Secret=opensearchpassword,type=env,target=OPENSEARCH_PASSWORD
