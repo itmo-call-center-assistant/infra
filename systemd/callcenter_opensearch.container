@@ -6,7 +6,7 @@ ContainerName=callcenter_opensearch
 Image=docker.io/opensearchproject/opensearch:3
 Environment=discovery.type=single-node
 Secret=opensearchpassword,type=env,target=OPENSEARCH_INITIAL_ADMIN_PASSWORD
-AutoUpdate=registry
+Volume=opensearch-data:/usr/share/opensearch/data
 Pod=callcenter.pod
 
 [Service]
