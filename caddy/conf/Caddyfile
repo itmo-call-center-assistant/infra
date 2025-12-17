@@ -1,6 +1,5 @@
 {$HOST} {
     reverse_proxy callcenter_rag:8000
-    header Access-Control-Allow-Origin "*"
     encode gzip
 
     route /opensearch/* {
