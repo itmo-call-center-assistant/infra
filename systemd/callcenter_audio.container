@@ -1,0 +1,12 @@
+[Unit]
+Description=Python audio API
+
+[Container]
+ContainerName=callcenter_audio
+Image=ghcr.io/itmo-call-center-assistant/audio:latest
+Environment=CONFIG_PATH=/app/configs/default.yaml
+AutoUpdate=registry
+Pod=callcenter.pod
+
+[Service]
+Restart=always

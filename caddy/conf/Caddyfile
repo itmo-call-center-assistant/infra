@@ -6,4 +6,9 @@
         uri strip_prefix /opensearch
         reverse_proxy localhost:9200
     }
+
+    route /audio/* {
+        uri strip_prefix /audio
+        reverse_proxy localhost:8001
+    }
 }
